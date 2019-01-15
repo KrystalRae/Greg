@@ -1,42 +1,286 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
-</head>
-<body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+﻿@*<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>@ViewBag.Title - My ASP.NET Application</title>
+        @Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")
+    </head>
+    <body>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li>@Html.ActionLink("About", "About", "Home")</li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    </ul>
+                </div>
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+        </div>
+        <div class="container body-content">
+            @RenderBody()
+            <hr />
+            <footer>
+                <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            </footer>
+        </div>
+
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
+    </body>
+    </html>*@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Apptidy | App Landing pages HTML Templates </title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- icofont -->
+    <link rel="stylesheet" href="assets/css/icofont.min.css">
+    <!-- flaticon -->
+    <link rel="stylesheet" href="assets/css/flaticon.css">
+    <!-- animate.css -->
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <!-- magnific popup -->
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- responsive -->
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body>
+
+    <!-- navbar area start -->
+    <nav class="navbar navbar-area navbar-expand-lg navbar-light home-2">
+        <div class="container">
+            <a class="navbar-brand logo" href="index.html">
+                <img src="assets/img/logo-white.png" class="white" alt="logo">
+                <img src="assets/img/logo.png" class="black" alt="logo">
+            </a>
+            <div class="collapse navbar-collapse" id="apptidy">
+
+                <!-- navbar collapse start -->
+                <ul class="navbar-nav" id="primary-menu">
+                    <!-- navbar- nav -->
+                    <li class="nav-item active">
+                        <a class="nav-link pl-0" href="#home">
+                            Home
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#feature">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#screenshort">Screens</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="#pricing">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#team">Team</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Blog</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="blog.html">Blog</a>
+                            <a class="dropdown-item" href="blog-details.html">Blog Details</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item navbar-btn-wrapper">
+                        <a class="nav-link boxed-btn blank" href="#">Download</a>
+                    </li>
                 </ul>
+                <!-- /.navbar-nav -->
+            </div>
+            <!-- /.navbar btn wrapper -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#apptidy" aria-controls="apptidy" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- navbar collapse end -->
+        </div>
+    </nav>
+    <!-- navbar area end -->
+    <!-- header area start  -->
+    <header class="header-area header-style-three header-bg-3" id="home">
+        <div class="header-overlay-image">
+            <svg id="Layer_1" x="0px" y="0px" viewBox="0 0 1921 819.8" style="enable-background:new 0 0 1921 819.8;" xml:space="preserve" class="svg hero__wave--svg replaced-svg">
+            <path class="st0" d="M1921,413.1v406.7H0V0.5h0.4l228.1,598.3c30,74.4,80.8,130.6,152.5,168.6c107.6,57,212.1,40.7,245.7,34.4  c22.4-4.2,54.9-13.1,97.5-26.6L1921,400.5V413.1z"></path>
+            <path class="st1" d="M1921,387.9v431.9H0V0h13l226.6,594.4c14.4,35.7,34,67.4,58.3,94.3c24.4,26.9,54.2,49.8,88.6,68.1  c50.2,26.6,105.8,40.1,165.2,40.1c36.1,0,63.6-5.2,72.6-6.9c21.6-4,53.9-12.9,96.1-26.2L1921,387.9z"></path>
+                    </svg>
+        </div>
+        <div class="container">
+            <div class="row ">
+                <div class="col-lg-7">
+                    <div class="header-inner">
+                        <h1 class="title wow fadeInDown">Showcase Your App With Apptidy</h1>
+                        <p>Apprtidy is the best app landing page which will help you showcase your business, lifestyle, social, or shopping app in the best possible manner.</p>
+                        <div class="btn-wrapper wow fadeInUp">
+                            <a href="#" class="boxed-btn btn-rounded"><i class="icofont-brand-apple"></i> App Store</a>
+                            <a href="#" class="boxed-btn btn-rounded blank"><img src="assets/img/icons/google-play.png" alt=""> Play Store</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header area end  -->
+    @RenderBody()
+
+    <!-- footer area start -->
+    <footer class="footer-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="footer-top">
+                        <!-- footer top area -->
+                        <div class="row">
+                            <div class="col-lg-3 col-md-6">
+                                <div class="footer-widget widget">
+                                    <h4 class="widget-title">Apptidy</h4>
+                                    <ul class="menu">
+                                        <li> <a href="#"><i class="icofont-rounded-double-right"></i> Features</a> </li>
+                                        <li> <a href="#"><i class="icofont-rounded-double-right"></i> Security</a> </li>
+                                        <li> <a href="#"><i class="icofont-rounded-double-right"></i> Download</a> </li>
+                                        <li> <a href="#"><i class="icofont-rounded-double-right"></i> Apptidy Web</a> </li>
+                                        <li> <a href="#"><i class="icofont-rounded-double-right"></i> Business</a> </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <div class="footer-widget widget">
+                                    <h4 class="widget-title">Company</h4>
+                                    <ul class="menu">
+                                        <li> <a href="#"><i class="icofont-rounded-double-right"></i> About</a> </li>
+                                        <li> <a href="#"><i class="icofont-rounded-double-right"></i> News</a> </li>
+                                        <li> <a href="#"><i class="icofont-rounded-double-right"></i> Blog</a> </li>
+                                        <li> <a href="#"><i class="icofont-rounded-double-right"></i> Contact</a> </li>
+                                        <li> <a href="#"><i class="icofont-rounded-double-right"></i> Terms</a> </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <div class="footer-widget widget">
+                                    <h4 class="widget-title">Download</h4>
+                                    <ul class="menu">
+                                        <li> <a href="#"><i class="icofont-rounded-double-right"></i> Mac/Pc</a> </li>
+                                        <li> <a href="#"><i class="icofont-rounded-double-right"></i> Android</a> </li>
+                                        <li> <a href="#"><i class="icofont-rounded-double-right"></i> Iphone</a> </li>
+                                        <li> <a href="#"><i class="icofont-rounded-double-right"></i> Windows Phone</a> </li>
+                                        <li> <a href="#"><i class="icofont-rounded-double-right"></i> Nokia</a> </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <div class="footer-widget widget">
+                                    <h4 class="widget-title">Support</h4>
+                                    <ul class="menu">
+                                        <li> <a href="#"><i class="icofont-rounded-double-right"></i> Helpdek</a> </li>
+                                        <li> <a href="#"><i class="icofont-rounded-double-right"></i> Forum</a> </li>
+                                        <li> <a href="#"><i class="icofont-rounded-double-right"></i> Partner</a> </li>
+                                        <li> <a href="#"><i class="icofont-rounded-double-right"></i> Testimonial</a> </li>
+                                        <li> <a href="#"><i class="icofont-rounded-double-right"></i> Resource</a> </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- //. footer top area -->
+                    <div class="footer-bottom">
+                        <!-- footer bottom area -->
+                        <div class="copyright-area">
+                            <div class="left-content-area">
+                                <!-- left content area -->
+                                &copy; 2018 Apptidy. All Rights Reserved.
+                            </div><!-- //. left content area -->
+                            <div class="right-content-area">
+                                <!-- right content area -->
+                                <ul class="social-icon">
+                                    <li><a href="#"><i class="icofont-facebook"></i></a></li>
+                                    <li><a href="#"><i class="icofont-twitter"></i></a></li>
+                                    <li><a href="#"><i class="icofont-instagram"></i></a></li>
+                                </ul>
+                            </div><!-- //. right content aera -->
+                        </div>
+                    </div><!-- //. footer bottom area -->
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer area end -->
+    <!-- preloader area start -->
+    <div class="preloader-wrapper" id="preloader">
+        <div class="preloader">
+            <div class="sk-circle">
+                <div class="sk-circle1 sk-child"></div>
+                <div class="sk-circle2 sk-child"></div>
+                <div class="sk-circle3 sk-child"></div>
+                <div class="sk-circle4 sk-child"></div>
+                <div class="sk-circle5 sk-child"></div>
+                <div class="sk-circle6 sk-child"></div>
+                <div class="sk-circle7 sk-child"></div>
+                <div class="sk-circle8 sk-child"></div>
+                <div class="sk-circle9 sk-child"></div>
+                <div class="sk-circle10 sk-child"></div>
+                <div class="sk-circle11 sk-child"></div>
+                <div class="sk-circle12 sk-child"></div>
             </div>
         </div>
     </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
-    </div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+    <!-- preloader area end -->
+    <!-- back to top area start -->
+    <div class="back-to-top">
+        <i class="icofont-simple-up"></i>
+    </div>
+    <!-- back to top area end -->
+    <!-- jquery -->
+    <script src="assets/js/jquery.js"></script>
+    <!-- popper -->
+    <script src="assets/js/popper.min.js"></script>
+    <!-- bootstrap -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- owl carousel -->
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <!-- magnific popup -->
+    <script src="assets/js/jquery.magnific-popup.js"></script>
+    <!-- contact js-->
+    <script src="assets/js/contact.js"></script>
+    <!-- wow js-->
+    <script src="assets/js/wow.min.js"></script>
+    <!-- way points js-->
+    <script src="assets/js/waypoints.min.js"></script>
+    <!-- counterup js-->
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <!-- google map api -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDi-rrw9lb-uKY1vHd9gkzuBpj4-hiBsUA&callback=initMap" async defer></script>
+    <!-- google map activate js -->
+    <script src="assets/js/goolg-map-activate.js"></script>
+    <!-- main -->
+    <script src="assets/js/main.js"></script>
 </body>
+
 </html>
